@@ -23,7 +23,7 @@ class AssetMap(base: String, assetMap: String) {
     // Avoid memoizing the asset map in Dev.
     if (Play.current.mode == Mode.Dev) {
       if (path.startsWith("javascripts")) {
-        Asset(path)
+        Asset(s"$base$path")
       } else {
         assets().getOrElse(path, throw AssetNotFoundException(path))
       }
