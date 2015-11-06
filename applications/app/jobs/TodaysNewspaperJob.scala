@@ -13,17 +13,15 @@ import slices.{TTT, ContainerDefinition, Fixed, FixedContainers}
 
 import scala.concurrent.Future
 
-case class FrontPageBookSections(id: String, displayName: String)
-
 object TodaysNewspaperJob extends ExecutionContexts with Dates with Logging {
   protected val todaysPaper = AkkaAgent[Set[FaciaContainer]](Set.empty)
 
   val bookSections = List(
-    FrontPageBookSections("theguardian/mainsection/topstories", "Front page"),
-    FrontPageBookSections("theguardian/mainsection/uknews", "UK news"),
-    FrontPageBookSections("theguardian/mainsection/eyewitness", "Eyewitness"),
-    FrontPageBookSections("theguardian/mainsection/international", "International"),
-    FrontPageBookSections("theguardian/mainsection/financial3", "Financial") //TODO use the webTitle
+    "theguardian/mainsection/topstories",
+    "theguardian/mainsection/uknews",
+    "theguardian/mainsection/eyewitness",
+    "theguardian/mainsection/international",
+    "theguardian/mainsection/financial3"
   )
 
   def fetchTodaysPaper {
@@ -31,10 +29,10 @@ object TodaysNewspaperJob extends ExecutionContexts with Dates with Logging {
 
     bookSections.foreach { bookSection =>
 
-      val item = LiveContentApi.item(bookSection.id).useDate("newspaper-edition").showFields("all").showElements("all").pageSize(20).fromDate(today) //todo restrict show-fields?
+      val item = LiveContentApi.item(bookSection).useDate("newspaper-edition").showFields("all").showElements("all").pageSize(20).fromDate(today) //todo restrict show-fields?
       val resultsF: Future[FaciaContainer] = LiveContentApi.getResponse(item).map { resp =>
           val content = getResultsOrderByNewspaperNumber(resp.results).map(c => FaciaContentConvert.frontendContentToFaciaContent(Content(c)))
-          bookSectionContainer(bookSection.id, bookSection.displayName, content, bookSections.indexOf(bookSection))
+          bookSectionContainer(bookSection, resp.tag.map(_.webTitle), content, bookSections.indexOf(bookSection))
         }
 
 
@@ -52,7 +50,7 @@ object TodaysNewspaperJob extends ExecutionContexts with Dates with Logging {
     pageNumberToContent.sortBy(_._1).map(_._2)
   }
 
-  private def bookSectionContainer(dataId: String, displayName: String, trails: Seq[FaciaContent], index: Int): FaciaContainer = {
+  private def bookSectionContainer(dataId: String, displayName: Option[String], trails: Seq[FaciaContent], index: Int): FaciaContainer = {
     val containerDefinition = trails.length match {
       case 1 => FixedContainers.fixedSmallSlowI
       case 2 => FixedContainers.fixedSmallSlowII
@@ -62,8 +60,8 @@ object TodaysNewspaperJob extends ExecutionContexts with Dates with Logging {
     FaciaContainer(
       index,
       Fixed(containerDefinition),
-      CollectionConfigWithId(dataId, CollectionConfig.empty.copy(displayName = Some(displayName))),
-      CollectionEssentials(trails, Nil, Some(displayName), Some(dataId), None, None)
+      CollectionConfigWithId(dataId, CollectionConfig.empty.copy(displayName = displayName)),
+      CollectionEssentials(trails, Nil, displayName, Some(dataId), None, None)
     )
   }
 
