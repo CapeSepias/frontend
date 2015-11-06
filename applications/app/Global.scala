@@ -3,6 +3,7 @@ import common.{CloudWatchApplicationMetrics, ContentApiMetrics}
 import conf.{CorsErrorHandler, Filters, SwitchboardLifecycle}
 import contentapi.SectionsLookUpLifecycle
 import dev.DevParametersLifecycle
+import jobs.NewspaperLifecycle
 import metrics.FrontendMetric
 import ophan.SurgingContentAgentLifecycle
 import play.api.mvc.WithFilters
@@ -17,6 +18,7 @@ object Global extends WithFilters(Filters.common: _*)
   with IndexListingsLifecycle
   with SectionsLookUpLifecycle
   with SwitchboardLifecycle
+  with NewspaperLifecycle
   with CorsErrorHandler {
   override lazy val applicationName = "frontend-applications"
 
