@@ -1912,10 +1912,10 @@
   resolved "https://registry.yarnpkg.com/@guardian/commercial-core/-/commercial-core-0.19.1.tgz#48740ad167ba1e0f85e2711901a1ed1471d7abf2"
   integrity sha512-Aa/rTBPvduJxbqgOU9NvorqV+4VDvTyEJCZxuG7clocO+1shvlkjx32egIxVfot0Fd/i5c76+hHkv02PcifEVg==
 
-"@guardian/consent-management-platform@6.11.5":
-  version "6.11.5"
-  resolved "https://registry.yarnpkg.com/@guardian/consent-management-platform/-/consent-management-platform-6.11.5.tgz#93681cbf61de0fadb4b65d835d7fc445cb847b31"
-  integrity sha512-ap7b09qk8I/EfoWB3NR8kT63hBpm4ATFGpRicCQ61DLMw2PgCWunMvizdbSmo5wNCQKPFgmX9cfRT5IGfPneKw==
+"@guardian/consent-management-platform@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@guardian/consent-management-platform/-/consent-management-platform-8.0.0.tgz#91b26f941025043194e921d6f6f2914c5bbadaaa"
+  integrity sha512-eZDLKdibB/3htdOBO9Oz7ccffJg4MrIqwqBu1s15fWy18sIDpXdEgGeZRYx6yaOaqNgB2rbC4EsVJOM+LNldbA==
   dependencies:
     "@guardian/libs" "^1"
 
