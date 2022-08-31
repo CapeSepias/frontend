@@ -1912,12 +1912,12 @@
   resolved "https://registry.yarnpkg.com/@guardian/commercial-core/-/commercial-core-0.19.1.tgz#48740ad167ba1e0f85e2711901a1ed1471d7abf2"
   integrity sha512-Aa/rTBPvduJxbqgOU9NvorqV+4VDvTyEJCZxuG7clocO+1shvlkjx32egIxVfot0Fd/i5c76+hHkv02PcifEVg==
 
-"@guardian/consent-management-platform@6.11.5":
-  version "6.11.5"
-  resolved "https://registry.yarnpkg.com/@guardian/consent-management-platform/-/consent-management-platform-6.11.5.tgz#93681cbf61de0fadb4b65d835d7fc445cb847b31"
-  integrity sha512-ap7b09qk8I/EfoWB3NR8kT63hBpm4ATFGpRicCQ61DLMw2PgCWunMvizdbSmo5wNCQKPFgmX9cfRT5IGfPneKw==
+"@guardian/consent-management-platform@10.11.1":
+  version "10.11.1"
+  resolved "https://registry.yarnpkg.com/@guardian/consent-management-platform/-/consent-management-platform-10.11.1.tgz#fa01a9262963ac07df9476e591d14601efbc4588"
+  integrity sha512-7dKcKZ3L/Y/hG9MB6i1invZmTVL6EepIv1ioGCW7uR9MVhWcuIGR1MJqKWMIzQgtZ2p0CXtSzKQOvbRtfX5fxQ==
   dependencies:
-    "@guardian/libs" "^1"
+    "@guardian/libs" "^7.1.4"
 
 "@guardian/eslint-config-typescript@^0.5.0":
   version "0.5.0"
@@ -1931,7 +1931,7 @@
   resolved "https://registry.yarnpkg.com/@guardian/eslint-config/-/eslint-config-0.5.0.tgz#ece14ec90b372932c7bf01992fc6d8ce58f7f26e"
   integrity sha512-THJn0wg7i9YjSVM9ofobsJgS+WH9ybrZH1+0CXLAebp0T53RGtgZUkek82mDg1h3DidsM+f7HSZqoQyrCbPzPw==
 
-"@guardian/libs@^1", "@guardian/libs@^1.7.1":
+"@guardian/libs@^1.7.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-1.8.1.tgz#22bccd66be7c5bf70cd5bbb1bf7700d94610ccb7"
   integrity sha512-Q/JPLhNeYa5XhDPJhw/1+fbZmszopvovWW8I7dGEuFPGWeNUmXAbW8J3kzuonDu7l9/tuFZg8jljbKHZlrFx0A==
@@ -1940,6 +1940,11 @@
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-2.8.0.tgz#23e53a131152c2029a330c007194eaf7cccdfa44"
   integrity sha512-JnqfdNE7LOF/KtQIMdaFnH4DfAp4Kc7okENK/3D93xBZhhRCvJ51hS7ceXPhBcd1CaYd/VGWdhfa50zd+0nO2A==
+
+"@guardian/libs@^7.1.4":
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-7.1.4.tgz#f5de14f52a32cb677361d49157c94eb046a2b9a8"
+  integrity sha512-r2AJk+4EakNLCLXHhUEqdYSjFhuq19k7tsQO5+53YZc6x6ADEXFNRVE/7EzbODgu5pVwk5SQ/rMuWsE7+5qdVQ==
 
 "@guardian/prettier@^0.5.0":
   version "0.5.0"
