@@ -2273,10 +2273,10 @@
   dependencies:
     type-fest "2.12.2"
 
-"@guardian/commercial-core@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@guardian/commercial-core/-/commercial-core-6.0.0.tgz#e49abb0ae5985431ecba41aba21c74afbbfed20b"
-  integrity sha512-CYcfLRGEVrHVfSsxG8SaBO6AZz27MZmhCA29NX6Y85ODD92fNKp41SVegUkXdb/kSBwFrRXE2xcCeHcjQ9IopA==
+"@guardian/commercial-core@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@guardian/commercial-core/-/commercial-core-6.3.0.tgz#9a56db885482adbe3ae1b184a046906d3157d371"
+  integrity sha512-+CxVVLD1BA/XYGF+TQsp0N+55TEIEGQstP1AUJ3RfdnN7pvTh4ZnypLGmLZ3l/WhRsnHIIa7Deu7tt2+4AeE2w==
 
 "@guardian/consent-management-platform@^12.0.0":
   version "12.0.0"
