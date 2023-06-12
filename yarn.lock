@@ -2206,6 +2206,11 @@
   resolved "https://registry.yarnpkg.com/@guardian/ab-core/-/ab-core-4.0.0.tgz#50c1fc076437e594b367f6e8d9469a3d9b97a78e"
   integrity sha512-l6Ot/anisLKyoLZOp8koW7Ia5JFOtmZkB0sfgdWajv5+N0w0UScUVoImEdPlFstM1anSd3FvV8D3UgYkRzAang==
 
+"@guardian/ab-core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@guardian/ab-core/-/ab-core-5.0.0.tgz#cce32ff4cdfb6b24c013723bf352dcd61135d34d"
+  integrity sha512-Td5gtK2sARl+fXj1Qe6RuFqf/zxuZjW1q2Jck09zXPIfMgU+sJoTi549zbNeC1cldCBhPWy/qPQ0r+8klfF7jg==
+
 "@guardian/atom-renderer@1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@guardian/atom-renderer/-/atom-renderer-1.2.2.tgz#db10b98ed73636c4bd6941ec103c9f60ff15549e"
